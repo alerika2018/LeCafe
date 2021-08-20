@@ -1,0 +1,478 @@
+/*VARIABLES***********************************/
+/*MIXONS***********************************/
+/*RESET***************************************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*TYPOGRAPHY***************************************/
+h1 {
+  font-family: "PT Sans Narrow";
+}
+
+h2,
+h3 {
+  font-family: "Spectra SC";
+}
+
+body {
+  font-family: "Spectra", Georgia;
+}
+
+/*ACCESIBILITY***************************************/
+.screen-reader-text {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*HEADER***************************************/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header h1 {
+  padding-left: 1.5rem;
+  font-size: 7rem;
+}
+
+header .mainMenu ul li,
+header .socialMenu ul li {
+  list-style-type: none;
+}
+
+header .mainMenu ul li a,
+header .socialMenu ul li a {
+  text-decoration: none;
+}
+
+header .mainMenu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid mediumseagreen;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+
+header .mainMenu ul li a {
+  color: black;
+  padding-right: 2rem;
+}
+
+header .socialMenu {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+header .socialMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .socialMenu ul li {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+header .socialMenu ul li a {
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+  }
+  header .mainMenu {
+    padding-left: 3rem;
+  }
+  header .mainMenu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  header .mainMenu ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 0px;
+    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-self: center;
+  }
+  header .mainMenu ul li a {
+    padding: 0.3rem;
+    margin: 0 auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .mainMenu ul li a:hover {
+    background-color: mediumseagreen;
+    color: white;
+  }
+  header .socialMenu {
+    padding: 0;
+  }
+  header .socialMenu ul li a {
+    padding: 0.3rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .socialMenu ul li a:hover {
+    background-color: mediumseagreen;
+    color: white;
+  }
+}
+
+/*MAIN***************************************/
+main .breakfast,
+main .lunch,
+main .dinner {
+  padding-bottom: 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .breakfast {
+  background-image: url("images/breakfast.jpg");
+}
+
+main .lunch {
+  background-image: url("images/lunch.jpg");
+}
+
+main .dinner {
+  background-image: url("images/dinner.jpg");
+}
+
+main .menuTitle {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+main .menuTitle h2 {
+  background-color: mediumseagreen;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+main .fullMenu {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
+main .fullMenu .menu {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+main .fullMenu .menu table {
+  width: 95%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+main .fullMenu .menu table caption {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+main .fullMenu .menu table tbody tr :nth-child(1) {
+  margin-left: 1rem;
+}
+
+main .fullMenu .menu table tbody tr :nth-child(2) {
+  text-align: right;
+}
+
+main .fullMenu .menu table tbody td {
+  border-bottom: 5px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+}
+
+main .fullMenu div:nth-of-type(2) div:nth-of-type(1) {
+  padding-bottom: 1rem;
+}
+
+main .bookTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3vw solid mediumseagreen;
+}
+
+main .bookTable h3 {
+  background-color: mediumseagreen;
+  color: white;
+  margin: 0.7rem auto 0 auto;
+  text-align: center;
+}
+
+main .bookTable .book {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 2rem auto;
+}
+
+main .bookTable .book .left div,
+main .bookTable .book .rigth div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 30px;
+}
+
+main .bookTable .book .left {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+main .bookTable .book .left div {
+  margin: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .bookTable .book .rigth div {
+  border-bottom: 1px solid mediumseagreen;
+}
+
+main .bookTable h3,
+main .bookTable .book {
+  width: 90%;
+}
+
+main .bookTable input {
+  border: 0;
+  width: 100%;
+}
+
+main .bookTable #btnBook {
+  border-radius: 20px;
+  width: 30%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid mediumseagreen;
+  font-weight: bold;
+}
+
+main .bookTable #btnBook:hover {
+  background-color: mintcream;
+}
+
+main .locationFrame {
+  position: relative;
+}
+
+main .locationFrame .location {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 13vh;
+  left: 8vw;
+  padding: 1rem;
+}
+
+main .locationFrame .location h3,
+main .locationFrame .location p {
+  margin-left: 0.5rem;
+}
+
+main .locationFrame .location h3 {
+  padding-top: 0.7rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+main .locationFrame .location p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+@media screen and (min-width: 600px) {
+  main .bookTable h3,
+  main .bookTable .book {
+    width: 40%;
+  }
+  main .bookTable h3 .left div,
+  main .bookTable h3 .rigth div,
+  main .bookTable .book .left div,
+  main .bookTable .book .rigth div {
+    height: 50px;
+  }
+  main .bookTable h3 {
+    margin-top: 3rem;
+  }
+  main .bookTable #btnBook {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main .bookTable h3,
+  main .bookTable .book {
+    width: 50%;
+  }
+  main .breakfast,
+  main .lunch,
+  main .dinner {
+    padding-left: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  main .breakfast .fullMenu,
+  main .lunch .fullMenu,
+  main .dinner .fullMenu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  main .breakfast .fullMenu div:nth-of-type(1),
+  main .lunch .fullMenu div:nth-of-type(1),
+  main .dinner .fullMenu div:nth-of-type(1) {
+    padding-bottom: 1rem;
+  }
+  main .breakfast .fullMenu div:nth-of-type(2),
+  main .lunch .fullMenu div:nth-of-type(2),
+  main .dinner .fullMenu div:nth-of-type(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .breakfast .fullMenu div:nth-of-type(2) div:nth-of-type(1),
+  main .lunch .fullMenu div:nth-of-type(2) div:nth-of-type(1),
+  main .dinner .fullMenu div:nth-of-type(2) div:nth-of-type(1) {
+    padding-top: 3rem;
+  }
+}
+
+/*FOOTER***************************************/
+footer .copyright {
+  display: none;
+}
+
+footer nav {
+  background-color: black;
+  color: white;
+}
+
+footer nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+footer nav ul li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style-type: none;
+  border-right: 1px solid white;
+}
+
+footer nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+footer nav ul li i {
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  footer nav {
+    display: none;
+  }
+  footer .copyright {
+    display: block;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
